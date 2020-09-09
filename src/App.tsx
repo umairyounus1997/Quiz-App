@@ -14,16 +14,20 @@ type AnswerObject = {
 function App() {
 
   const [loading, setLoading] = useState(false);
-  const [questions, setQuestions] = useState<QuestionState>([]);
+  const [questions, setQuestions] = useState<QuestionState[]>([]);
   const [number, setNumber] = useState(0);
-  const [userAnswers, setUserAnswers] = useState([]);
+  const [userAnswers, setUserAnswers] = useState<AnswerObject[]>([]);
   const [score, setScore] = useState(0);
   const [gameOver, setGameOver] = useState(true);
 
   console.log(fetchQuestions(TOTAL_QUESTIONS, Difficulty.EASY));
   
 
-  const startQuiz = async() => {};
+  const startQuiz = async() => {
+    setLoading(true);
+    setGameOver(false);
+    const newQuestions = await ()
+  };
 
   const nextQuestion = async() => {};
 
