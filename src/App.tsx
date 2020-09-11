@@ -34,7 +34,16 @@ function App() {
     setLoading(false);
   };
 
-  const nextQuestion = async() => {};
+  const nextQuestion = async() => {
+      const nextQuestion = number + 1;
+
+      if (nextQuestion === TOTAL_QUESTIONS){
+        setGameOver(true);
+      }
+      else {
+        setNumber(nextQuestion);
+      }
+  };
 
   const checkAnswer = (e: React.MouseEvent<HTMLButtonElement>) => {
     if(!gameOver){
