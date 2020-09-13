@@ -74,7 +74,9 @@ return (
         Begin Quiz 
       </button>) : null }
       {!gameOver ? (
-      <p className='score'> Score: </p>): null }
+      <p className='score'> 
+      Score: {score}
+       </p>): null }
       {loading ? (
       <p className='loading'> Loading... </p>) : null}
       {!loading && !gameOver ? (
